@@ -550,7 +550,7 @@
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 1px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -865,15 +865,6 @@
   <section id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-photo-wrap reveal">
-          <img
-            class="about-photo"
-            src="https://picsum.photos/seed/meghna-nair-portrait/600/750"
-            alt="Meghna Nair"
-            loading="lazy"
-          >
-          <div class="about-photo-tag mono">Los Angeles, CA</div>
-        </div>
         <div class="about-copy">
           <h2 class="section-title reveal">Building at the<br>intersection of AI<br>and useful software.</h2>
           <div class="reveal reveal-delay-1">
@@ -883,13 +874,15 @@
           </div>
           <div class="about-chips reveal reveal-delay-2">
             <span class="chip">Python</span>
-            <span class="chip">TypeScript</span>
+            <span class="chip">PyTorch</span>
+            <span class="chip">LangChain</span>
+            <span class="chip">LangGraph</span>
+            <span class="chip">RAG</span>
             <span class="chip">FastAPI</span>
-            <span class="chip">LLM Pipelines</span>
-            <span class="chip">Pydantic</span>
-            <span class="chip">React</span>
+            <span class="chip">Next.js</span>
             <span class="chip">PostgreSQL</span>
             <span class="chip">Docker</span>
+            <span class="chip">GCP</span>
           </div>
           <div style="margin-top: 32px;" class="reveal reveal-delay-3">
           </div>
@@ -914,18 +907,17 @@
             <div class="exp-role">Software Engineering Intern</div>
             <div class="exp-location">Tenarai &bull; Los Gatos, CA</div>
             <ul class="exp-bullets">
-              <li>Engineered a <strong>data quality optimization framework</strong> in Python and SQL for an HP engagement, reducing validation errors across a globally distributed dataset spanning 3 regions.</li>
-              <li>Designing a <strong>multi-agent autonomous data quality onboarding framework</strong> on Azure AI Foundry using the Microsoft Agent Framework - a sequential four-agent pipeline (metadata extraction, LLM-driven rule generation, validation, and GraphQL deployment) orchestrated across Databricks Unity Catalog, Snowflake, and AzureSQL to programmatically populate Ataccama ONE's governance glossary with zero manual UI interaction.</li>
+              <li>Developed an agentic UAT validation pipeline comprising <strong>5 specialized agents</strong> for test case interpretation, metadata/schema mapping, cross-system query generation, defect detection, and signoff reporting using <strong>Azure OpenAI (GPT-4o)</strong> and RAG over a business data dictionary.</li>
+              <li>Automated manual data reconciliation across cloud data platforms including <strong>Databricks, Snowflake, and Azure SQL</strong>, and benchmarked pipeline output against manual reconciliation baselines to quantify validation-effort reduction and throughput gains before production rollout.</li>
             </ul>
             <div class="exp-tags">
               <span class="exp-tag">Python</span>
-              <span class="exp-tag">SQL</span>
-              <span class="exp-tag">Azure AI Foundry</span>
+              <span class="exp-tag">Azure OpenAI</span>
+              <span class="exp-tag">RAG</span>
               <span class="exp-tag">Multi-Agent</span>
               <span class="exp-tag">Databricks</span>
               <span class="exp-tag">Snowflake</span>
-              <span class="exp-tag">AzureSQL</span>
-              <span class="exp-tag">GraphQL</span>
+              <span class="exp-tag">Azure SQL</span>
             </div>
           </div>
         </div>
@@ -938,15 +930,16 @@
           </div>
           <div class="exp-body reveal reveal-delay-1">
             <div class="exp-role">Research Assistant</div>
-            <div class="exp-location">Advisor: Prof. Maja Matarić &bull; USC</div>
+            <div class="exp-location">Advisor: Prof. Maja Matari&#263; &bull; USC</div>
             <ul class="exp-bullets">
-              <li>Designed a <strong>Python pipeline to extract head-nod and postural-shift events</strong> from OpenFace skeletal pose time-series across child-robot Zoom sessions, producing per-session behavioral synchrony features for downstream statistical analysis.</li>
+              <li>Designed and validated a signal-processing pipeline to detect <strong>head-nod events from OpenFace pitch data</strong> across ~900 listener-segment recordings (~2 hours of Zoom video), achieving an <strong>F1 score of 0.833</strong> against human-labeled ground truth using ELAN annotations.</li>
+              <li>Extended the pipeline with <strong>SPIKE synchronization</strong> to quantify listener synchrony across 21 paired participants (dyads) in group therapy sessions.</li>
             </ul>
             <div class="exp-tags">
               <span class="exp-tag">Python</span>
               <span class="exp-tag">OpenFace</span>
-              <span class="exp-tag">Time-Series Analysis</span>
-              <span class="exp-tag">HRI</span>
+              <span class="exp-tag">Signal Processing</span>
+              <span class="exp-tag">SPIKE</span>
               <span class="exp-tag">Behavioral Analytics</span>
             </div>
           </div>
@@ -955,20 +948,42 @@
         <!-- USC Grader -->
         <div class="exp-entry">
           <div class="exp-meta reveal">
-            <div class="exp-date">Jan 2026 - Present</div>
+            <div class="exp-date">Jan 2026 - May 2026</div>
             <div class="exp-org">USC Viterbi<br>Los Angeles, CA</div>
           </div>
           <div class="exp-body reveal reveal-delay-1">
             <div class="exp-role">Course Grader, CSCI 570</div>
             <div class="exp-location">Analysis of Algorithms &bull; USC Viterbi School of Engineering</div>
             <ul class="exp-bullets">
-              <li>Evaluated assignments and exams for <strong>300+ graduate students</strong> by designing rubrics covering graph algorithms, dynamic programming, and NP-completeness.</li>
-              <li>Maintained scoring consistency across a <strong>5-grader team</strong> for one of USC's core CS theory courses.</li>
+              <li>Developed grading rubrics for <strong>graph algorithms, dynamic programming, and NP-completeness</strong> assignments while ensuring scoring consistency across a 5-grader team evaluating <strong>300+ graduate students</strong> per assignment cycle.</li>
             </ul>
             <div class="exp-tags">
               <span class="exp-tag">Graph Algorithms</span>
               <span class="exp-tag">Dynamic Programming</span>
               <span class="exp-tag">NP-Completeness</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tata Elxsi -->
+        <div class="exp-entry">
+          <div class="exp-meta reveal">
+            <div class="exp-date">Jan 2024 - May 2025</div>
+            <div class="exp-org">Tata Elxsi<br>Trivandrum, India</div>
+          </div>
+          <div class="exp-body reveal reveal-delay-1">
+            <div class="exp-role">Software Engineer, Autonomous Driving</div>
+            <div class="exp-location">Tata Elxsi &bull; Trivandrum, India</div>
+            <ul class="exp-bullets">
+              <li>Developed a <strong>sensor-fusion module for autonomous tailgate actuation</strong> on an Adaptive AUTOSAR architecture by integrating radar and ultrasonic sensor inputs through a multi-zone decision logic layer.</li>
+              <li>Built and validated a <strong>Python-based simulation interface</strong> used in 3 Tier-1 client design reviews, helping resolve integration issues prior to deployment.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">C++</span>
+              <span class="exp-tag">Python</span>
+              <span class="exp-tag">AUTOSAR</span>
+              <span class="exp-tag">Sensor Fusion</span>
+              <span class="exp-tag">Autonomous Driving</span>
             </div>
           </div>
         </div>
@@ -986,36 +1001,20 @@
       </div>
       <div class="skills-grid">
         <div class="skill-cell reveal">
-          <div class="skill-name">Python</div>
-          <div class="skill-desc">Backend systems, data pipelines, AI tooling</div>
+          <div class="skill-name">Languages</div>
+          <div class="skill-desc">Python, Java, C, SQL, JavaScript</div>
         </div>
         <div class="skill-cell reveal reveal-delay-1">
-          <div class="skill-name">LLM / AI Agents</div>
-          <div class="skill-desc">Groq, OpenAI, multi-agent orchestration</div>
+          <div class="skill-name">Machine Learning / AI</div>
+          <div class="skill-desc">PyTorch, TensorFlow, Scikit-learn, pgvector</div>
         </div>
         <div class="skill-cell reveal reveal-delay-2">
-          <div class="skill-name">FastAPI</div>
-          <div class="skill-desc">High-performance async REST APIs</div>
+          <div class="skill-name">LLM / Agentic AI</div>
+          <div class="skill-desc">LangChain, LangGraph, RAG, LLM Evaluation</div>
         </div>
         <div class="skill-cell reveal reveal-delay-3">
-          <div class="skill-name">TypeScript</div>
-          <div class="skill-desc">End-to-end type safety for web</div>
-        </div>
-        <div class="skill-cell reveal">
-          <div class="skill-name">React / Next.js</div>
-          <div class="skill-desc">Modern frontend with server rendering</div>
-        </div>
-        <div class="skill-cell reveal reveal-delay-1">
-          <div class="skill-name">PostgreSQL</div>
-          <div class="skill-desc">Relational databases, query optimization</div>
-        </div>
-        <div class="skill-cell reveal reveal-delay-2">
-          <div class="skill-name">Docker</div>
-          <div class="skill-desc">Containerized deploys, compose workflows</div>
-        </div>
-        <div class="skill-cell reveal reveal-delay-3">
-          <div class="skill-name">Pydantic</div>
-          <div class="skill-desc">Runtime data validation and type enforcement</div>
+          <div class="skill-name">Frameworks &amp; Infrastructure</div>
+          <div class="skill-desc">FastAPI, React, Next.js, Docker, Git, PostgreSQL, Supabase, GCP</div>
         </div>
       </div>
     </div>
@@ -1191,13 +1190,13 @@
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg>
               </div>
             </a>
-            <a href="https://linkedin.com/in/meghna-nair" class="social-link" target="_blank" rel="noopener">
+            <a href="https://linkedin.com/in/meghna-radhika-nair" class="social-link" target="_blank" rel="noopener">
               <div class="social-link-icon">
                 <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
               </div>
               <div class="social-link-text">
                 <strong>LinkedIn</strong>
-                <span>linkedin.com/in/meghna-nair</span>
+                <span>linkedin.com/in/meghna-radhika-nair</span>
               </div>
               <div class="social-link-arrow">
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg>
@@ -1219,7 +1218,7 @@
         </p>
         <div class="footer-links">
           <a href="https://github.com/megradhikan" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://linkedin.com/in/meghna-nair" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://linkedin.com/in/meghna-radhika-nair" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:meghnanair2002@gmail.com">Email</a>
         </div>
       </div>
