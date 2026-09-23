@@ -1026,12 +1026,41 @@
       <div class="projects-header">
         <p class="section-label reveal">Selected work</p>
         <h2 class="section-title reveal">Things I've built.</h2>
-        <p class="section-sub reveal">A mix of AI tooling, side projects, and experiments that turned into real products.</p>
+        <p class="section-sub reveal">A mix of AI tooling, systems engineering, and research that turned into real, working software.</p>
       </div>
       <div class="projects-grid">
 
-        <!-- Featured: Resume Tailor -->
-        <a href="https://resume-tailor-mauve-omega.vercel.app" class="project-card project-featured reveal" target="_blank" rel="noopener">
+        <!-- Featured: LSM SQL Engine -->
+        <a href="https://github.com/megradhikan/lsm_sql_engine" class="project-card project-featured reveal" target="_blank" rel="noopener">
+          <img
+            class="project-img"
+            src="https://raw.githubusercontent.com/megradhikan/lsm_sql_engine/master/docs/assets/demo.gif"
+            alt="lsm_sql_engine - REPL demo of table creation, a join+GROUP BY query, and EXPLAIN"
+            loading="lazy"
+          >
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Rust</span>
+              <span class="tag">LSM-Tree</span>
+              <span class="tag">SQL Engine</span>
+              <span class="tag">Query Optimizer</span>
+              <span class="tag">Fault Injection</span>
+            </div>
+            <h3 class="project-title">LSM SQL Engine</h3>
+            <p class="project-desc">
+              An embedded LSM-tree database with a SQL layer, built from scratch: a hand-rolled write-ahead log with crash-safe recovery, SSTables with sparse indexes and bloom filters, size-tiered compaction, and a hand-written SQL lexer/parser/planner feeding a cost-based query optimizer and Volcano-model executor. A fault-injection fuzzer simulates a crash mid-WAL-append, mid-flush, or mid-compaction and checks that recovery never loses an acknowledged write - it found two real bugs, including one that used to brick the database on restart. A schema migration tool built on top hard-links a shadow copy of live data and actually runs each migration against it before scoring it safe to deploy.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/megradhikan/lsm_sql_engine" class="project-link" target="_blank" rel="noopener">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </a>
+
+        <!-- Resume Tailor -->
+        <a href="https://resume-tailor-mauve-omega.vercel.app" class="project-card reveal" target="_blank" rel="noopener">
           <img
             class="project-img"
             src="https://raw.githubusercontent.com/megradhikan/resume-tailor/main/docs/screenshots/02-analysis.png"
@@ -1097,57 +1126,33 @@
           </div>
         </a>
 
-        <!-- TrialMate -->
-        <a href="https://github.com/megradhikan/trialmate" class="project-card reveal" target="_blank" rel="noopener">
+        <!-- NexusSearch -->
+        <a href="https://nexus-search-seven.vercel.app" class="project-card reveal" target="_blank" rel="noopener">
           <img
             class="project-img"
-            src="https://raw.githubusercontent.com/megradhikan/trialmate/main/assets/screenshot1.png"
-            alt="TrialMate - clinical trial matching"
+            src="assets/screenshots/nexus-search.png"
+            alt="NexusSearch - hybrid search across GitHub and Notion"
             loading="lazy"
           >
           <div class="project-body">
             <div class="project-tags">
               <span class="tag">Python</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">FAISS</span>
-              <span class="tag">BioBERT</span>
-              <span class="tag">Claude API</span>
-            </div>
-            <h3 class="project-title">TrialMate</h3>
-            <p class="project-desc">
-              AI clinical trial matching agent. Given a patient record (age, diagnoses, labs), it retrieves and ranks matching trials from ClinicalTrials.gov using a hybrid pipeline: deterministic rule verification (age/sex/lab thresholds) combined with BioBERT semantic search and a learned LogisticRegression reranker. Claude generates plain-language eligibility rationales citing specific clause IDs.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/megradhikan/trialmate" class="project-link" target="_blank" rel="noopener">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </a>
-
-        <!-- Segmentation -->
-        <a href="https://github.com/megradhikan/segmentation" class="project-card reveal reveal-delay-1" target="_blank" rel="noopener">
-          <img
-            class="project-img"
-            src="https://raw.githubusercontent.com/megradhikan/segmentation/main/assets/example_multiclass.png"
-            alt="Open-vocabulary image segmentation - multiclass example"
-            loading="lazy"
-          >
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Grounding DINO</span>
-              <span class="tag">SAM 2</span>
+              <span class="tag">BM25</span>
+              <span class="tag">pgvector</span>
+              <span class="tag">RRF</span>
               <span class="tag">FastAPI</span>
               <span class="tag">React</span>
             </div>
-            <h3 class="project-title">Open-Vocab Segmentation</h3>
+            <h3 class="project-title">NexusSearch</h3>
             <p class="project-desc">
-              Describe any object in plain English, get pixel-precise masks back. Grounding DINO detects bounding boxes from the text query, SAM 2 generates the masks, and a React frontend overlays them side-by-side with the original. Full CI pipeline with GitHub Actions.
+              Hybrid search engine fusing BM25 keyword search with pgvector dense retrieval via reciprocal rank fusion (k=60) over GitHub and Notion content. FastAPI backend, React/Vite frontend, with an eval harness (MRR/NDCG) that scores hybrid retrieval against BM25-only and dense-only baselines. The public deploy runs on a small seeded demo corpus rather than live GitHub/Notion ingestion.
             </p>
             <div class="project-links">
-              <a href="https://github.com/megradhikan/segmentation" class="project-link" target="_blank" rel="noopener">
+              <a href="https://nexus-search-seven.vercel.app" class="project-link" target="_blank" rel="noopener">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg>
+                Live demo
+              </a>
+              <a href="https://github.com/megradhikan/nexus-search" class="project-link" target="_blank" rel="noopener">
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                 GitHub
               </a>
@@ -1155,29 +1160,56 @@
           </div>
         </a>
 
-        <!-- Featured: PantryAI -->
-        <a href="https://github.com/megradhikan/pantryai" class="project-card project-featured reveal reveal-delay-2" target="_blank" rel="noopener">
+        <!-- NarrativeTrace -->
+        <a href="https://github.com/megradhikan/narrativetrace" class="project-card reveal" target="_blank" rel="noopener">
           <img
             class="project-img"
-            src="https://raw.githubusercontent.com/megradhikan/pantryai/main/docs/screenshots/dashboard.png"
-            alt="PantryAI - pantry inventory dashboard"
+            src="assets/screenshots/narrativetrace.png"
+            alt="NarrativeTrace - live claim cluster monitor over the Bluesky firehose"
             loading="lazy"
           >
           <div class="project-body">
             <div class="project-tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">Gemini 2.5</span>
+              <span class="tag">Python</span>
               <span class="tag">pgvector</span>
-              <span class="tag">Supabase</span>
-              <span class="tag">RAG</span>
-              <span class="tag">OCR</span>
+              <span class="tag">Bluesky / AT Proto</span>
+              <span class="tag">Embeddings</span>
             </div>
-            <h3 class="project-title">PantryAI</h3>
+            <h3 class="project-title">NarrativeTrace</h3>
             <p class="project-desc">
-              Scan a grocery receipt - get a living pantry. Tesseract OCR extracts items, Gemini 2.5 Flash normalizes and categorizes them, and a pgvector RAG pipeline matches your current stock to recipes (prioritizing what's about to expire). Includes a daily push notification system via Supabase Edge Functions that alerts you when items expire.
+              Live claim-clustering and coordination-signal detection over the Bluesky AT Protocol firehose. Embeds each post and clusters it against live centroids by semantic similarity, with a background job that re-clusters every 10 minutes, merging similar clusters and splitting low-cohesion ones. A separate coordination detector flags synchronized posting patterns while explicitly suppressing accounts with prior interaction history, evaluated against a hand-labeled offline harness measuring precision, recall, and F1 for both clustering quality and coordination detection.
             </p>
             <div class="project-links">
-              <a href="https://github.com/megradhikan/pantryai" class="project-link" target="_blank" rel="noopener">
+              <a href="https://github.com/megradhikan/narrativetrace" class="project-link" target="_blank" rel="noopener">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </a>
+
+        <!-- Featured: Elliptic Fraud Detection -->
+        <a href="https://github.com/megradhikan/elliptic-fraud-detection" class="project-card project-featured reveal reveal-delay-2" target="_blank" rel="noopener">
+          <img
+            class="project-img"
+            src="https://raw.githubusercontent.com/megradhikan/elliptic-fraud-detection/main/results/figures/pr_curve_comparison.png"
+            alt="Elliptic Fraud Detection - precision-recall curve, baseline vs. best GNN"
+            loading="lazy"
+          >
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">GNN</span>
+              <span class="tag">PyTorch Geometric</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">Graph ML</span>
+            </div>
+            <h3 class="project-title">Elliptic Fraud Detection</h3>
+            <p class="project-desc">
+              Classifies Elliptic-dataset Bitcoin transactions as licit or illicit, comparing a feature-only XGBoost/Random Forest baseline against GCN and GraphSAGE under both a standard transductive protocol and a leakage-free inductive split. Found that the raw edgelist has zero edges crossing a time-step boundary, which reframed the entire leakage analysis, plus a degree-preserving edge-shuffle ablation to isolate how much signal comes from real topology versus structure alone. The tuned baseline (F1=0.711) beats every standalone GNN; a confidence-weighted GNN+RF ensemble edges past both at F1=0.716.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/megradhikan/elliptic-fraud-detection" class="project-link" target="_blank" rel="noopener">
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                 GitHub
               </a>
