@@ -624,11 +624,15 @@
     .project-img {
       width: 100%;
       aspect-ratio: 16/8;
-      object-fit: cover;
+      object-fit: contain;
+      background: var(--bg-1);
       display: block;
       border-bottom: 1px solid var(--border);
       filter: brightness(0.85) saturate(0.9);
       transition: filter 0.3s;
+    }
+    .project-img.light-bg {
+      background: #f4f4f5;
     }
     .project-featured .project-img {
       aspect-ratio: 16/7;
@@ -1037,7 +1041,6 @@
             src="https://raw.githubusercontent.com/megradhikan/lsm_sql_engine/master/docs/assets/demo.gif"
             alt="lsm_sql_engine - REPL demo of table creation, a join+GROUP BY query, and EXPLAIN"
             loading="lazy"
-            style="object-position: top;"
           >
           <div class="project-body">
             <div class="project-tags">
@@ -1063,7 +1066,7 @@
         <!-- Resume Tailor -->
         <a href="https://resume-tailor-mauve-omega.vercel.app" class="project-card reveal" target="_blank" rel="noopener">
           <img
-            class="project-img"
+            class="project-img light-bg"
             src="https://raw.githubusercontent.com/megradhikan/resume-tailor/main/docs/screenshots/02-analysis.png"
             alt="Resume Tailor - ATS analysis dashboard"
             loading="lazy"
@@ -1164,7 +1167,7 @@
         <!-- NarrativeTrace -->
         <a href="https://github.com/megradhikan/narrativetrace" class="project-card reveal" target="_blank" rel="noopener">
           <img
-            class="project-img"
+            class="project-img light-bg"
             src="assets/screenshots/narrativetrace.png"
             alt="NarrativeTrace - live claim cluster monitor over the Bluesky firehose"
             loading="lazy"
@@ -1192,11 +1195,10 @@
         <!-- Featured: Elliptic Fraud Detection -->
         <a href="https://github.com/megradhikan/elliptic-fraud-detection" class="project-card project-featured reveal reveal-delay-2" target="_blank" rel="noopener">
           <img
-            class="project-img"
+            class="project-img light-bg"
             src="assets/screenshots/elliptic-fraud-detection.png"
             alt="Elliptic Fraud Detection - precision-recall curve, baseline vs. best GNN"
             loading="lazy"
-            style="object-fit: contain; background: #fff;"
           >
           <div class="project-body">
             <div class="project-tags">
@@ -1222,11 +1224,10 @@
         <!-- PantryAI -->
         <a href="https://github.com/megradhikan/pantryai" class="project-card reveal" target="_blank" rel="noopener">
           <img
-            class="project-img"
+            class="project-img light-bg"
             src="assets/screenshots/pantryai.png"
             alt="PantryAI - pantry dashboard, receipt scan, and AI-generated recipe screens"
             loading="lazy"
-            style="object-position: top;"
           >
           <div class="project-body">
             <div class="project-tags">
